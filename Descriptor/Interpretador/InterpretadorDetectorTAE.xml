@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="Interpretador">
+      <import location="file:/C:/Documents and Settings/thuener/Desktop/Trabalhando/ProjetoFinal/Dados/UIMA/Descriptor/Interpretador/InterpretadorAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="CriticaDetectorTAE">
+      <import location="file:/C:/Documents and Settings/thuener/Desktop/Trabalhando/ProjetoFinal/Dados/UIMA/Descriptor/Critica/CriticaDetectorTAE.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>Interpretador de TAGS</name>
+    <description/>
+    <version/>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>CriticaDetectorTAE</node>
+        <node>Interpretador</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">sentimentanalysis.interpretador.DadosXml</type>
+          <type allAnnotatorFeatures="true">sentimentanalysis.critica.TagsHtml</type>
+          <type allAnnotatorFeatures="true">sentimentanalysis.tags.Tags</type>
+          <type allAnnotatorFeatures="true">sentimentanalysis.interpretador.Interpretador</type>
+          <type allAnnotatorFeatures="true">sentimentanalysis.critica.Critica</type>
+        </outputs>
+        <languagesSupported>
+          <language>pt</language>
+        </languagesSupported>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>TutorialTypeSystem</name>
+  <description/>
+  <version>1.0</version>
+  <vendor>Thuener Armando da Silva</vendor>
+  <types>
+    <typeDescription>
+      <name>sentimentanalysis.HTMLtoXML.critica.TagsHtml</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>building</name>
+          <description>Building containing this room</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>sentimentanalysis.HTMLtoXML.tags.Tags</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>building</name>
+          <description>Building containing this room</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>sentimentanalysis.HTMLtoXML.critica.Critica</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>startTag</name>
+          <description/>
+          <rangeTypeName>sentimentanalysis.HTMLtoXML.tags.Tags</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>endTag</name>
+          <description/>
+          <rangeTypeName>sentimentanalysis.HTMLtoXML.tags.Tags</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>org.apache.uima.examples.tokenizer.Token</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>org.apache.uima.examples.tokenizer.Sentence</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

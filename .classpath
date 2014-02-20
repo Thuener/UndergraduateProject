@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="UIMA_HOME/lib/uima-core.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Program Files/apache-uima/docs/api"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="UIMA_HOME/lib/uima-document-annotation.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Program Files/apache-uima/docs/api"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="UIMA_HOME/lib/uima-cpe.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Program Files/apache-uima/docs/api"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="UIMA_HOME/lib/uima-tools.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Program Files/apache-uima/docs/api"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="UIMA_HOME/lib/uima-adapter-vinci.jar"/>
+	<classpathentry kind="var" path="UIMA_HOME/lib/uima-adapter-soap.jar"/>
+	<classpathentry kind="var" path="UIMA_HOME/lib/jVinci.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/thuener/Desktop/Trabalhando/ProjetoFinal/Jama-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/thuener/Desktop/Trabalhando/ProjetoFinal/Codigo/lib/swing-layout-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NetBeans 6.0 Beta 1/java1/modules/ext/pxlab.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/thuener/Desktop/Trabalhando/ProjetoFinal/UIMA/lib/uima-examples.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/thuener/Desktop/Trabalhando/ProjetoFinal/Aplicativo/lib/ExAplicativoClas.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

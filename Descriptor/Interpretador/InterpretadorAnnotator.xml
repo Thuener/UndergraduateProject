@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>
+  <annotatorImplementationName>sentimentanalysis.HTMLtoXML.interpretador.InterpretadorAnnotator</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>Critica Annotator</name>
+    <description/>
+    <version>1.0</version>
+    <vendor>Thuener Armando da Silva</vendor>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <typeSystemDescription>
+      <imports>
+        <import location="TutorialTypeSystem.xml"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">sentimentanalysis.tags.Tags</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">sentimentanalysis.critica.Critica</type>
+          <type allAnnotatorFeatures="true">sentimentanalysis.critica.TagsHtml</type>
+          <type allAnnotatorFeatures="true">sentimentanalysis.interpretador.Interpretador</type>
+          <type allAnnotatorFeatures="true">sentimentanalysis.interpretador.DadosXml</type>
+        </outputs>
+        <languagesSupported>
+          <language>pt</language>
+        </languagesSupported>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

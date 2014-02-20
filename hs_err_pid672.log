@@ -1,0 +1,138 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6d8002ef, pid=672, tid=876
+#
+# Java VM: Java HotSpot(TM) Client VM (1.5.0_11-b03 mixed mode)
+# Problematic frame:
+# V  [jvm.dll+0xc02ef]
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0082b4f0):  VMThread [id=876]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000000
+
+Registers:
+EAX=0x00000000, EBX=0x00000000, ECX=0x0082b0b0, EDX=0x0082cc10
+ESP=0x0accfe10, EBP=0x0accfe6c, ESI=0x0ae0fb10, EDI=0x0082b4f0
+EIP=0x6d8002ef, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x0accfe10)
+0x0accfe10:   00000000 0ae0fb10 00838540 00868fd0
+0x0accfe20:   00000001 0082b4f0 0082b0b0 0082cc00
+0x0accfe30:   0082cc0c 0082cff4 0accff18 0082b0d8
+0x0accfe40:   0082b4d0 0082b0d0 0082b0d8 0082b4c4
+0x0accfe50:   008684e0 00838540 00838520 0accfea4
+0x0accfe60:   06def9e8 06def9d0 00000000 0accfea4
+0x0accfe70:   6d8003e0 6d814235 6d80048e 00823670
+0x0accfe80:   0ae0facc 6d800419 0ae0fb10 6d86a230 
+
+Instructions: (pc=0x6d8002ef)
+0x6d8002df:   ff 85 c0 0f 84 d8 00 00 00 53 8b 40 04 89 45 fc
+0x6d8002ef:   8b 18 4b 0f 88 b7 00 00 00 eb 03 8b 45 fc 8b 40 
+
+
+Stack: [0x0ac90000,0x0acd0000),  sp=0x0accfe10,  free space=255k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0xc02ef]
+V  [jvm.dll+0xc03e0]
+V  [jvm.dll+0x129cfe]
+V  [jvm.dll+0x129ea7]
+V  [jvm.dll+0x129c0c]
+C  [MSVCRT.dll+0x2a3b0]
+C  [kernel32.dll+0xb683]
+
+VM_Operation (0x0ae0facc): change breakpoints, mode: safepoint, requested by thread 0x00835e60
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0083c240 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=868]
+  0x0083bd50 JavaThread "CompilerThread0" daemon [_thread_blocked, id=784]
+  0x0083ab90 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2524]
+  0x00837170 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=1612]
+  0x00836650 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=3332]
+  0x00835e60 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=3312]
+  0x0082d4a0 JavaThread "Finalizer" daemon [_thread_blocked, id=2144]
+  0x0082c200 JavaThread "Reference Handler" daemon [_thread_blocked, id=2316]
+  0x00823010 JavaThread "main" [_thread_blocked, id=3624]
+
+Other Threads:
+=>0x0082b4f0 VMThread [id=876]
+  0x0083edd0 WatcherThread [id=3252]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x008236a0/0x00002714] Threads_lock - owner thread: 0x0082b4f0
+
+Heap
+ def new generation   total 576K, used 180K [0x02c90000, 0x02d30000, 0x03170000)
+  eden space 512K,  34% used [0x02c90000, 0x02cbc888, 0x02d10000)
+  from space 64K,   4% used [0x02d20000, 0x02d20aa0, 0x02d30000)
+  to   space 64K,   0% used [0x02d10000, 0x02d10000, 0x02d20000)
+ tenured generation   total 2736K, used 2266K [0x03170000, 0x0341c000, 0x06c90000)
+   the space 2736K,  82% used [0x03170000, 0x033a6990, 0x033a6a00, 0x0341c000)
+ compacting perm gen  total 8192K, used 2707K [0x06c90000, 0x07490000, 0x0ac90000)
+   the space 8192K,  33% used [0x06c90000, 0x06f34ce0, 0x06f34e00, 0x07490000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x0040d000 	C:\Program Files\Java\jdk1.5.0_11\bin\javaw.exe
+0x7c900000 - 0x7c9b0000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c8f5000 	C:\WINDOWS\system32\kernel32.dll
+0x77dd0000 - 0x77e6b000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x77e70000 - 0x77f01000 	C:\WINDOWS\system32\RPCRT4.dll
+0x7e410000 - 0x7e4a0000 	C:\WINDOWS\system32\USER32.dll
+0x77f10000 - 0x77f57000 	C:\WINDOWS\system32\GDI32.dll
+0x77c10000 - 0x77c68000 	C:\WINDOWS\system32\MSVCRT.dll
+0x76390000 - 0x763ad000 	C:\WINDOWS\system32\IMM32.DLL
+0x629c0000 - 0x629c9000 	C:\WINDOWS\system32\LPK.DLL
+0x74d90000 - 0x74dfb000 	C:\WINDOWS\system32\USP10.dll
+0x10000000 - 0x10036000 	C:\WINDOWS\system32\sockspy.dll
+0x00920000 - 0x00986000 	C:\Program Files\Agnitum\Outpost Firewall\wl_hook.dll
+0x6d740000 - 0x6d8dd000 	C:\Program Files\Java\jdk1.5.0_11\jre\bin\client\jvm.dll
+0x76b40000 - 0x76b6d000 	C:\WINDOWS\system32\WINMM.dll
+0x6d300000 - 0x6d308000 	C:\Program Files\Java\jdk1.5.0_11\jre\bin\hpi.dll
+0x76bf0000 - 0x76bfb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x6d400000 - 0x6d435000 	C:\Program Files\Java\jdk1.5.0_11\jre\bin\jdwp.dll
+0x6d710000 - 0x6d71c000 	C:\Program Files\Java\jdk1.5.0_11\jre\bin\verify.dll
+0x6d380000 - 0x6d39d000 	C:\Program Files\Java\jdk1.5.0_11\jre\bin\java.dll
+0x6d730000 - 0x6d73f000 	C:\Program Files\Java\jdk1.5.0_11\jre\bin\zip.dll
+0x6d290000 - 0x6d297000 	C:\Program Files\Java\jdk1.5.0_11\jre\bin\dt_socket.dll
+0x71ab0000 - 0x71ac7000 	C:\WINDOWS\system32\WS2_32.dll
+0x71aa0000 - 0x71aa8000 	C:\WINDOWS\system32\WS2HELP.dll
+0x71a50000 - 0x71a8f000 	C:\WINDOWS\System32\mswsock.dll
+0x76f20000 - 0x76f47000 	C:\WINDOWS\system32\DNSAPI.dll
+0x76fb0000 - 0x76fb8000 	C:\WINDOWS\System32\winrnr.dll
+0x76f60000 - 0x76f8c000 	C:\WINDOWS\system32\WLDAP32.dll
+0x76fc0000 - 0x76fc6000 	C:\WINDOWS\system32\rasadhlp.dll
+0x662b0000 - 0x66308000 	C:\WINDOWS\system32\hnetcfg.dll
+0x71a90000 - 0x71a98000 	C:\WINDOWS\System32\wshtcpip.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:1630
+java_command: thuener.InterpretaXMLModelo
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Sun\SDK\bin;C:\Program Files\IDM Computer Solutions\UltraCompare
+USERNAME=thuener
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 15 Model 72 Stepping 2, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 2
+
+CPU:total 2 (cores per cpu 2, threads per core 1) family 15 model 72 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, mmxext, 3dnowext, 3dnow
+
+Memory: 4k page, physical 981604k(118828k free), swap 2369404k(1529732k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.5.0_11-b03) for windows-x86, built on Dec 15 2006 01:16:12 by "java_re" with MS VC++ 6.0
+
